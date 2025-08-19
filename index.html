@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zap Logic Consulting</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #f0f0f0;
+      background: none;
+    }
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: url('https://img1.wsimg.com/isteam/getty/2210287447/:/rs=w:1920,m');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: brightness(0.6);
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    header {
+      background: rgba(26, 115, 232, 0.85);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 { margin-bottom: 0.5rem; }
+    header p { font-size: 1.2rem; margin-top: 0; }
+    nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    .container { max-width: 1100px; margin: auto; padding: 2rem; background: rgba(0,0,0,0.6); border-radius: 10px; }
+    section { margin-bottom: 3rem; }
+    h1, h2, h3 { color: #ffffff; }
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card { background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 8px rgba(0,0,0,0.3); transition: transform 0.2s ease, background 0.3s ease; color: #fff; }
+    .card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.2); }
+    footer { background: rgba(10,61,145,0.85); color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
+    .btn { display: inline-block; padding: 0.8rem 1.4rem; background: #1a73e8; color: #fff; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s ease; }
+    .btn:hover { background: #155ec0; }
+    .hero { text-align: center; padding: 3rem 1rem; }
+    .hero h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+    form { max-width: 500px; margin: 1rem auto; background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 8px rgba(0,0,0,0.3); color: #fff; }
+    form input, form textarea { width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; background: rgba(255,255,255,0.2); color: #fff; }
+    form button { padding: 0.8rem 1.4rem; background: #1a73e8; color: #fff; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: background 0.3s ease; }
+    form button:hover { background: #155ec0; }
+    .success-message { display: none; text-align: center; color: #00ff00; font-weight: bold; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+
+  <header>
+    <h1>Zap Logic Consulting</h1>
+    <p>Empowering Businesses with Cloud & AI-Driven Solutions</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Transform Your Business with Cloud & AI</h2>
+    <p>We help companies harness the power of artificial intelligence and cloud computing to innovate, scale, and lead in their industries.</p>
+    <a class="btn" href="#contact">Book a Consultation</a>
+  </div>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Us</h2>
+      <p>At <strong>Zap Logic Consulting</strong>, we specialize in cloud-based, AI-driven solutions. Our mission is to help businesses embrace innovation by integrating artificial intelligence, cloud platforms, and automation to drive growth, efficiency, and competitive advantage.</p>
+      <p><strong>Office Address:</strong> 3557 W Walnut Hill Ln, Irving, Texas 75038, USA</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="card">
+          <h3>AI Strategy & Integration</h3>
+          <p>Design and implement AI solutions that enhance decision-making, automate workflows, and deliver real business value.</p>
+        </div>
+        <div class="card">
+          <h3>Cloud Transformation</h3>
+          <p>Seamlessly migrate and modernize your infrastructure with AWS, Azure, or Google Cloud to ensure scalability and security.</p>
+        </div>
+        <div class="card">
+          <h3>Data & Machine Learning</h3>
+          <p>Unlock insights from your data with predictive analytics, advanced ML models, and real-time intelligence solutions.</p>
+        </div>
+        <div class="card">
+          <h3>Automation & Optimization</h3>
+          <p>Streamline business operations with intelligent automation, reducing costs and improving efficiency.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Fill out the form below, and we’ll get back to you at <strong>gopulsellc@gmail.com</strong>.</p>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="success-message" id="successMessage">✅ Thank you! Your message has been sent successfully.</div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Zap Logic Consulting. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      setTimeout(() => { form.style.display = "none"; successMessage.style.display = "block"; }, 500);
+    });
+  </script>
+</body>
+</html>
